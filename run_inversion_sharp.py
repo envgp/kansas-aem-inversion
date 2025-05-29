@@ -128,7 +128,7 @@ reg = LaterallyConstrained(
     active_edges=indActiveEdges,
     norms=np.array([2., 0., 0.])
 )
-
+reg.gradient_type = 'components'
 opt = simpeg.optimization.ProjectedGNCG(maxIter=20, maxIterCG=50)
 invProb = simpeg.inverse_problem.BaseInvProblem(dmis, reg, opt)
 beta = simpeg.directives.BetaSchedule(coolingFactor=2, coolingRate=1)
@@ -165,4 +165,4 @@ m0 = np.ones(nP) * np.log(1./10.)
 mest = inv.run(m0)
 
 import dill
-dill.dump(save_model_dict.outDict, open("./output/inversion_results_sharp_precond.pik", "wb"))
+dill.dump(save_model_dict.outDict, open("./output/inversion_results_sharp_precond_comp.pik", "wb"))
