@@ -12,7 +12,7 @@
 
 ### Step 1: `Pip` install
 
-`pip install simpeg pyarrow fastparquet pandas libaarhusxyz
+`pip install simpeg pyarrow fastparquet pandas libaarhusxyz`
 
 ### Step 2: Use a specific branch of simpeg
 
