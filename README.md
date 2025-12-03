@@ -20,7 +20,7 @@
 
 `cd simpeg`
 
-`git checkout -f em1d_stitched_v022
+`git checkout -f em1d_stitched_v022`
 
 `pip install -e .`
 
